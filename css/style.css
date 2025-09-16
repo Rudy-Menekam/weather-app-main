@@ -1,5 +1,4 @@
-
-   * {
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -11,31 +10,31 @@ body {
     padding: 48px 112px;
 }
 
-.attribution { 
-    font-size: 11px; 
-    text-align: center; 
+.attribution {
+    font-size: 11px;
+    text-align: center;
 }
-   
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
 
 .dropbtn {
- background-color: #262540;
- width: 119px;
- height: 43px;
- cursor: pointer;
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  padding: 12px 16px;
-  font-family: inherit;
-  margin: 0;
-  color: white;
-  border-radius: 8px;
-  gap: 14px;
+    background-color: #262540;
+    width: 119px;
+    height: 43px;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    font-family: inherit;
+    margin: 0;
+    color: white;
+    border-radius: 8px;
+    gap: 14px;
 }
-  
+
 .nav-items {
     display: flex;
     justify-content: space-between;
@@ -45,8 +44,244 @@ body {
 #header-text {
     font-size: 52px;
     font-weight: bold;
-    padding-top: 62px;
-    padding-bottom: 62px;
+    padding: 62px 0px 62px 0px;
     color: white;
     text-align: center;
+}
+
+input[type=text] {
+    width: 526px;
+    height: 56px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: #262540;
+    border: none;
+    background-image: url('/weather-app-main/assets/images/icon-search.svg');
+    background-position: 14px 17px;
+    background-repeat: no-repeat;
+    padding: 16px 24px 16px 44px;
+}
+
+#search-btn {
+    width: 114px;
+    height: 56px;
+    border: none;
+    border-radius: 12px;
+    padding: 16px 24px 16px 24px;
+    background-color: #4658D9;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+}
+
+#search {
+    display: flex;
+    justify-content: center;
+}
+
+
+.metrics {
+    display: flex;
+    gap: 32px;
+}
+
+/*Weather section*/
+.left-side {
+    flex: 1;
+        display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+.right-side {
+    flex: 2;
+}
+.details-cards {
+    background-color: #262540;
+    border: 1px solid #02012C;
+    border-radius: 12px;
+    width: 182px;
+    height: 118px;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    padding: 20px;
+    gap: 24px;
+}
+
+.forecast-cards {
+    background-color: #262540;
+    border: 1px solid #02012C;
+    border-radius: 12px;
+    width: 100.57px;
+    height: 165px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 10px 16px;
+}
+
+.forecast-cards #degree {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.forecast-cards p {
+    font-size: 16px;
+    color: white;
+    text-align: center;
+}
+
+.daily-forecast {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.forecast-row {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.daily-forecast p {
+    font-size: 20px;
+    color: white;
+}
+
+.Weather-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.Weather-info {
+    width: 800px;
+    height: 286px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, rgba(70, 88, 217, 1) 0%, rgba(43, 27, 156, 1) 100%);
+    background-image: url('/weather-app-main/assets/images/bg-today-large.svg');
+  /* background-position: 14px 17px;  */
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 80px 24px;
+    align-items: center;
+}
+
+.Weather-info img {
+    width: 800px;
+    height: 286px;
+}
+
+.Weather-details {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.details-cards p {
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+}
+
+.details-cards h1 {
+    font-size: 32px;
+    font-weight: 400;
+    color: white;
+}
+
+.temperature-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.temperature-container img {
+   width: 120px;
+   height: 120px;
+}
+
+.temperature-container h1 {
+   font-size: 96px;
+   font-weight: bold;
+   color: white;
+}
+
+.location-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.location-info h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color:  white;
+}
+
+.location-info p {
+    font-size: 18px;
+    font-weight: 400;
+    color:  white;
+}
+
+/*Breakpoints tablet*/
+
+@media (max-width: 768px) {
+    body {
+        padding: 24px 24px;
+    }
+
+    input[type=text] {
+        width: 590px;
+    }
+
+    #header-text {
+        margin: 0px 117px 0px 117px;
+        padding: 48px 0px 48px 0px;
+
+    }
+}
+
+/*phone*/
+
+@media (max-width: 600px) {
+    body {
+        padding: 16px 16px;
+    }
+
+    #search {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    input[type=text] {
+        width: 343px;
+    }
+
+    #search-btn {
+        width: 343px;
+    }
+
+    .nav-items #logo {
+        width: 137.9px;
+    }
+
+    .dropbtn {
+        width: 89px;
+        height: 33px;
+        font-size: 14px;
+        padding: 0px;
+    }
+
+    .dropbtn img {
+        width: 10px;
+        height: 10px;
+    }
+
 }
